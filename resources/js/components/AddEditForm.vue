@@ -187,7 +187,7 @@
                     if(this.price == ''){
                         this.errors.push('Please enter price');
                     }
-                    console.log(this.sale_rent);
+                    
                     if((this.sale_rent !== 0 && this.sale_rent !== 1) || this.sale_rent === ''){
                         this.errors.push('Please select sale or rent option');
                     }
