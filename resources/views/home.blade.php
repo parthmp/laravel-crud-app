@@ -93,6 +93,8 @@
                    
 
                     <hr>
+                    <a href="{{ url('/create') }}" class="btn btn-primary">Create</a>
+                    <hr>
 
                     <table class="table">
 

@@ -94,7 +94,7 @@ class HomeController extends Controller
             
         }
 
-        $prop = $prop->paginate(15);
+        $prop = $prop->orderBy('id', 'DESC')->paginate(15);
 
 
         return view('home', [

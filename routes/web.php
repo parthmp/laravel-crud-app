@@ -20,5 +20,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 Route::middleware('auth')->get('/delete', [App\Http\Controllers\CRUDController::class, 'remove']);
 Route::middleware('auth')->get('/edit/{id}', [App\Http\Controllers\CRUDController::class, 'edit']);
+Route::middleware('auth')->post('/edit/{id}', [App\Http\Controllers\CRUDController::class, 'saveEdited']);
+Route::middleware('auth')->get('/create', [App\Http\Controllers\CRUDController::class, 'create']);
+Route::middleware('auth')->post('/create', [App\Http\Controllers\CRUDController::class, 'saveNew']);
 
 
