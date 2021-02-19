@@ -2,6 +2,18 @@
 
 return [
 
+    'rent'  =>  0,
+    'sale'  =>  1,
+
+    'per_page'  => 100,
+
+    /* API endpoint and API key */
+
+    'api_endpoint' => env('API_ENDPOINT'),
+
+    'api_key' => env('API_KEY'),
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
