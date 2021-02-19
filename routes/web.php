@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', function(){
+    return redirect('/');
+});
 
 Route::middleware('auth')->get('/delete', [App\Http\Controllers\CRUDController::class, 'remove']);
 Route::middleware('auth')->get('/edit/{id}', [App\Http\Controllers\CRUDController::class, 'edit']);

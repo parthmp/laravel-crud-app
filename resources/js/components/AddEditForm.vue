@@ -149,7 +149,7 @@
                     this.bathroom != '' &&
                     this.property_type != '' &&
                     this.price != '' &&
-                    this.sale_rent != ''
+                    this.sale_rent !== ''
                 ){
 
                     return true;
@@ -187,8 +187,8 @@
                     if(this.price == ''){
                         this.errors.push('Please enter price');
                     }
-                    
-                    if((this.sale_rent != 0 && this.sale_rent != 1) || this.sale_rent == ''){
+                    console.log(this.sale_rent);
+                    if((this.sale_rent !== 0 && this.sale_rent !== 1) || this.sale_rent === ''){
                         this.errors.push('Please select sale or rent option');
                     }
 
@@ -224,6 +224,7 @@
                 this.price = all_values.price;
                 this.property_type = all_values.property_type_id;
                 this.sale_rent = all_values.sale_or_rent_type;
+
                 this.image = all_values.image;
                 
             }
